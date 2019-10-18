@@ -1,0 +1,29 @@
+@import 'src/style/normalize'; // Global styles could be included in gatsby-browser.js instead of here
+
+
+header{
+    background: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .nav-item{
+      a{
+        .nav-link{
+          text-decoration: none;
+          transition-duration: 300ms;
+          transition-property: background-color;
+          background:black;
+          color:white;
+          padding:10px; 
+        }
+        &:hover{
+          .nav-link{
+            background:blue;
+          }
+        }
+        &:visited{
+          color:inherit;
+        }
+      }
+    }
+}

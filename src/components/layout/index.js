@@ -8,9 +8,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import Headroom from "react-headroom"
 
 import Header from "./header"
-import "./layout.css"
+import "./style/layout.scss"
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,7 +27,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
+    <Headroom>
+
       <Header siteTitle={data.site.siteMetadata.title} />
+      </Headroom>
       <div
         style={{
           margin: `0 auto`,
