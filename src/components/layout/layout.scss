@@ -1,14 +1,20 @@
 @import 'src/style/normalize'; // Global styles could be included in gatsby-browser.js instead of here
-
-
+main{
+}
+#main-content{
+  margin:0 50px;
+}
 header{
-    background: grey;
+  .headroom--top{
+    position:relative;
+  }
+    background: #ffffff63;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     .nav-item{
       a{
-        .nav-link{
+         .nav-link{
           text-decoration: none;
           transition-duration: 300ms;
           transition-property: background-color;
