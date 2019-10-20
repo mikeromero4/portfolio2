@@ -1,3 +1,4 @@
+
 @import 'src/style/normalize'; // Global styles could be included in gatsby-browser.js instead of here
 main{
 }
@@ -13,6 +14,8 @@ header{
     flex-direction: row;
     justify-content: space-around;
     .nav-item{
+                 flex-grow:1;
+
       a{
          .nav-link{
           text-decoration: none;
@@ -32,4 +35,10 @@ header{
         }
       }
     }
+}
+
+@media only screen and (max-width: 600px) {
+  #main-content{
+    margin: 0;
+  }
 }

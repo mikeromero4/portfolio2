@@ -7,10 +7,10 @@ import "./layout.scss"
 const Layout = ({ children }) => {
   return (
     <>
-    <div id = "fixedBackground">    
+    {/* <div id = "fixedBackground">    
     <div id = "fixedBackground2"></div>
     <div id = "fixedBackground3"></div>
-</div>
+</div> */}
    
     <main>
       <div id = "main-content">{children}</div>
