@@ -9,13 +9,14 @@ import "./portfolio.scss"
 
 export default() => (
     <article id = "portfolio-page">
-            <section id = "about-section"><About/> </section>
-            
-<Headroom offset="400" tolerance="27"
+            <Headroom offset="400" tolerance="27"
 pinStart ={300}
 >
 <Header siteTitle={"my portfolio"} />
 </Headroom >
+            <section id = "about-section"><About/> </section>
+            
+
             <section id = "projects-section"> <Projects/></section>
             <section id = "contact-section"><Contact/></section>
     </article>

@@ -94,13 +94,14 @@ export default (props)=>  {
             index={i} time={timer} width={width} settings={props.settings} iconSize={props.settings.iconSize}
         />)}
 
-   return<div ref={el}>
-       <div id = "icon-animation">{items}</div>
- <Curve {...{time:timer,settings:{color:'rgba(200, 200, 250, 0.4)',yOffset:20,skew:10,...props.settings,lineHeight:100,half:false},width:width}}/>
- <Curve {...{time:timer,settings:{color:'rgba(200, 200, 255, 0.36)',skew:10,...props.settings,lineHeight:200},width:width}}/>
+   return<div style = {{overflow:"hidden",height:`${170}px`, marginBottom:`-${210}px`}} ref={el}>
+       <div style={{marginBottom:`-${210}px`}} id = "icon-animation">{items}</div>
 
- <Curve {...{time:timer,settings:{color:'rgba(200, 200, 255, 0.36)',skew:10,...props.settings,lineHeight:50,yOffset:70},width:width}}/>
- <Curve {...{time:timer,settings:{color:'rgba(200, 200, 255, 0.36)',skew:10,...props.settings,lineHeight:20,yOffset:140},width:width}}/>
+       <Curve {...{time:timer,settings:{color:'rgba(250, 250, 250, 0.2)',yOffset:0,...props.settings,lineHeight:290,half:false,skew:0,flowSpeed:-50},width:width}}/>
+       <Curve {...{time:timer,settings:{color:'rgba(250, 250, 250, 0.5)',yOffset:80,...props.settings,lineHeight:180,half:false,skew:0,flowSpeed:-70},width:width}}/>
+
+       <Curve {...{time:timer,settings:{color:'rgba(250, 250, 250, .8)',yOffset:130,skew:0,...props.settings,lineHeight:90,half:false},width:width}}/>
+       <Curve {...{time:timer,settings:{color:'black',yOffset:220,skew:0,...props.settings,lineHeight:120,half:false},width:width}}/>
 
     </div>
  
