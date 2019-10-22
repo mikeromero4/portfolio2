@@ -1,18 +1,23 @@
+.headroom-wrapper{
+  margin-top: 146px;
+}
 #curve{
       line-height:0;
-
+position:absolute;
   path{
-  fill:white;
   stroke: none;
   stroke-width: 2px;
 }
 svg{
-  background:black;
+  background:none;
 }
 }
 #icon-animation{
   height: 50px;
   position:relative;
+  .curve{
+    position:absolute
+  }
   .animated-icon{
 svg{
   //background:white;
@@ -45,21 +50,27 @@ border-radius: 5px;
 
 #portfolio-page section{
     padding:40px;
-    margin:60px 20px;
+    background:black;
     &:first-child{
-      margin:0;
+      background:white;
       padding:0;
     }
   }
 #about-section{
   #intro{
+    padding:50px;
     display:flex;
     align-items: center;
     h3{
+      padding:20px;
+      border-left:2px solid black;
+
+color:black;
       text-align:left;
     }
   }
   h2{
+    padding:20px;
     color: #7dc5f1;
     font-size: 7vw;
     text-shadow: 2px 2px 2px black;
