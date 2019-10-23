@@ -10,7 +10,7 @@ import "./portfolio.scss"
 export default() => (
     <article id = "portfolio-page">
             <Headroom offset="400" tolerance="27"
-pinStart ={300}
+pinStart ={590}
 >
 <Header siteTitle={"my portfolio"} />
 </Headroom >

@@ -2,7 +2,10 @@
 @import 'src/style/normalize'; // Global styles could be included in gatsby-browser.js instead of here
 main{
 }
-#main-content{
+.headroom-wrapper{
+  position:sticky;
+  top:0;
+  z-index: 40;
 }
 header{
   .headroom--top{
