@@ -1,7 +1,14 @@
+.stretch{
+  display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 .headroom-wrapper{
   //margin-top: 146px;
 }
 #curve{
+  bottom: 0;
       line-height:0;
 position:absolute;
   path{
@@ -14,7 +21,6 @@ svg{
 }
 #icon-animation{
   z-index: 10;
-  height: 50px;
   position:relative;
   .curve{
     position:absolute
@@ -74,11 +80,8 @@ path{
 #about-section{
   height: 100vh;
   #intro{
-    position:absolute;
+    position:relative;
     z-index: 30;
-    padding-top: 50px;
-    margin:50px;
-    margin-top: 0;
     display:flex;
     align-items: center;
     h3{
@@ -106,6 +109,8 @@ path{
 }
 
 #projects-section{
+  background: black;
+    padding: 50px;
   .note{
     height: 100vh;
     border-radius: 10px;
@@ -156,7 +161,7 @@ z-index:-100;
 background: linear-gradient(to bottom, rgba(3, 123, 157, 0.26) 0%, #02638300 100%);
     /* background-image: url(https://yourtechclass.com/wp-content/uploads/2018/01/yy3.png); */
  &.type2{
-  background:linear-gradient(rgb(5, 154, 187) 0%, rgba(60, 172, 204, 0.46) 20%, rgb(159, 232, 255) 75%);
+  background:linear-gradient(#059abb,rgba(60,172,204,.46) 30%,#8ae0f0 90%);
  }
  &.type3{
   background: linear-gradient(to top, rgb(0, 141, 185) 0%, #00475f0d 100%);
@@ -166,6 +171,6 @@ background: linear-gradient(to bottom, rgba(3, 123, 157, 0.26) 0%, #02638300 100
 @media only screen and (max-width: 600px) {
   #about-section #intro{
     margin: 0;
-    display:inherit;
+    display:inline-block;
   }
 }

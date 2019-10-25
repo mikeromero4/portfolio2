@@ -68,7 +68,7 @@ function createPath(props) {
   }
   let points = xs.map(x => {
     let y =
-      yOffset +
+      
       amplitude * 1 +
       Math.sin(x / frequency + time / flowSpeed) * amplitude
     return [x, y]
@@ -95,14 +95,14 @@ function createPath(props) {
   return path
 }
 let Curve = props => (
-  <div id="curve">
+  <div id="curve" style={{      bottom:(props.settings.yOffset || 0)
+}}> 
     <svg
       style={{ fill: props.settings.color }}
       width={props.width}
       height={
         props.settings.amplitude * 2.5 +
-        props.settings.lineHeight +
-        (props.settings.yOffset || 0)
+        props.settings.lineHeight 
       }
     >
       <path d={createPath(props)} />
@@ -115,8 +115,36 @@ export default props => {
   const requestRef = React.useRef()
   const el = React.useRef()
 
-  let width = el.current ? el.current.offsetWidth : 0
+  const el2 = React.useRef()
 
+  let width = el.current ? el.current.offsetWidth : 0
+  let height = el.current ? el.current.offsetHeight : 0
+
+  let curveSettings2 = [
+    {
+      color: "rgb(127, 209, 228)",
+      yOffset:0,
+      lineHeight: height-20,
+      flowSpeed: -40,
+    },
+    {
+      color: "rgb(193, 238, 248)",
+      yOffset:0,
+      lineHeight: height/1.8,
+      flowSpeed: -70,
+    },
+  
+    {
+      color: "rgb(228, 248, 255)",
+      yOffset:0,
+      lineHeight: height/4,
+    },
+    {
+      color: "black",
+      yOffset:30,
+      lineHeight: 30,
+    },
+  ]
   useEffect(function() {
     requestRef.current = requestAnimationFrame(animate)
     return () => cancelAnimationFrame(requestRef.current)
@@ -166,8 +194,8 @@ export default props => {
     )
   }
   return (
-    <div style={{ overflowX: "visible", height: `${170}px` }} ref={el}>
-      <div style={{ top: "495px" }} id="icon-animation">
+    <div style={{height:"100%"}} ref={el}>
+      <div style={{ top: (height-200)+"px" }} id="icon-animation">
         {items}
       </div>
       {curves}
@@ -203,31 +231,5 @@ let curveSettings = [
     lineHeight: 120,
     frequency: 120,
     amplitude: 8,
-  },
-]
-let startY=300
-let curveSettings2 = [
-  {
-    color: "rgb(155, 224, 248)",
-    yOffset: startY+0,
-    lineHeight: 190,
-    flowSpeed: -40,
-  },
-  {
-    color: "rgb(193, 238, 248)",
-    yOffset: startY+80,
-    lineHeight: 180,
-    flowSpeed: -70,
-  },
-
-  {
-    color: "rgb(228, 248, 255)",
-    yOffset: startY+130,
-    lineHeight: 90,
-  },
-  {
-    color: "black",
-    yOffset: startY+220,
-    lineHeight: 120,
   },
 ]
