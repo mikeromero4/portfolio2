@@ -14,7 +14,7 @@ export default()=><>
    <h2>Michael Romero</h2>
    <h3>Front-end Web developer specializing in modern JavaScript,React and responsive design.</h3>
    </div>
-<div style = {{flexGrow:1,flexBasis:"50%",background:'#8ae0f0',position:"relative",width:"100%",overflow:"hidden"}}>
+<div style = {{flexGrow:1,flexBasis:"50%",background:'#8ae0f0',position:"relative",width:"100%",overflow:"visible",zIndex:200}}>
 <Animation settings={{ 
         speed:.4,
         frequency:120,

@@ -12,6 +12,8 @@ import sql from "@iconify/icons-logos/mysql" //shame
 import html from "@iconify/icons-logos/html-5" //shame
 import js from "@iconify/icons-logos/javascript" //shame
 import css from "@iconify/icons-logos/css-3" //shame
+import "./animation.scss"
+
 let icons = [aws, react, redux, netlify, gatsby, html, css, js, sass, sql] //shame
 let calc=({time,index,settings,width})=>{
     //this is the responsive animated sinewave recipe.
@@ -119,7 +121,7 @@ export default props => {
 
   let width = el.current ? el.current.offsetWidth : 0
   let height = el.current ? el.current.offsetHeight : 0
-
+let main=50
   let curveSettings2 = [
     {
       color: "rgb(127, 209, 228)",
@@ -137,12 +139,12 @@ export default props => {
     {
       color: "rgb(228, 248, 255)",
       yOffset:0,
-      lineHeight: height/4,
+      lineHeight: main*2,
     },
     {
       color: "black",
-      yOffset:30,
-      lineHeight: 30,
+      yOffset:-main/2,
+      lineHeight: main,
     },
   ]
   useEffect(function() {
@@ -195,7 +197,7 @@ export default props => {
   }
   return (
     <div style={{height:"100%"}} ref={el}>
-      <div style={{ top: (height-200)+"px" }} id="icon-animation">
+      <div style={{ top: (height-100)+"px" }} id="icon-animation">
         {items}
       </div>
       {curves}
