@@ -20,8 +20,8 @@ export default()=><>
         frequency:120,
         amplitude:8,
         flowSpeed:90,
-        iconSize:50,
-        spacing:40,
+        iconSize:60,
+        spacing:80,
         lineHeight:50,
         half:false,
         shrink:false

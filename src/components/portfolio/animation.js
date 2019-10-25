@@ -131,14 +131,14 @@ let main=50
     },
     {
       color: "rgb(193, 238, 248)",
-      yOffset:0,
-      lineHeight: height/1.8,
+      yOffset:height/3.5,
+      lineHeight: height/2,
       flowSpeed: -70,
     },
   
     {
       color: "rgb(228, 248, 255)",
-      yOffset:0,
+      yOffset:height/2+props.settings.iconSize/2-80,
       lineHeight: main*2,
     },
     {
@@ -197,7 +197,7 @@ let main=50
   }
   return (
     <div style={{height:"100%"}} ref={el}>
-      <div style={{ top: (height-100)+"px" }} id="icon-animation">
+      <div style={{position:'absolute', bottom: ((height)/2+props.settings.iconSize/2)+"px" }} id="icon-animation">
         {items}
       </div>
       {curves}
