@@ -1,0 +1,15 @@
+//normalize and reset
+@import "./base/normalize.scss";
+@import "./base/reset.scss";
+
+//variables and mixins
+@import "./base/variables.scss";
+
+//layout
+@import "./layout/layout.scss";
+
+//modules
+@import "./modules/navbar.scss";
+@import "./modules/portfolio-sections/about.scss";
+@import "./modules/portfolio-sections/projects.scss";
+@import "./modules/striped-background.scss";

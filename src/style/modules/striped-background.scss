@@ -1,0 +1,23 @@
+.striped-bg {
+  background-size: auto;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  &__layer1 {   //the stripe layer
+    background-image: repeating-linear-gradient(
+      45deg,
+      $primary-color1 0px,
+      $primary-color2 3px,
+      $primary-color2 7px,
+      black 3px
+    );
+  }
+  &__layer2 {   //the gradient layer
+    background-image: linear-gradient(
+      $primary-color1  10%,
+      rgba($primary-color1, 0.1) 30%,
+      $primary-color2  90%
+    );
+  }
+}

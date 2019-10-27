@@ -97,7 +97,7 @@ function createPath(props) {
   return path
 }
 let Curve = props => (
-  <div id="curve" style={{      bottom:(props.settings.yOffset || 0)
+  <div className="curve" style={{      bottom:(props.settings.yOffset || 0)
 }}> 
     <svg
       style={{ fill: props.settings.color }}
@@ -131,7 +131,7 @@ let main=50
     },
     {
       color: "rgb(193, 238, 248)",
-      yOffset:height/3.5,
+      yOffset:height/3.9,
       lineHeight: height/2,
       flowSpeed: -70,
     },
@@ -143,8 +143,8 @@ let main=50
     },
     {
       color: "black",
-      yOffset:-main/2,
-      lineHeight: main,
+      yOffset:height/8+props.settings.iconSize/2-80,
+      lineHeight: main*(height/300),
     },
   ]
   useEffect(function() {
@@ -194,10 +194,16 @@ let main=50
         }}
       />
     )
+  
   }
+
+
+
+
+
   return (
     <div style={{height:"100%"}} ref={el}>
-      <div style={{position:'absolute', bottom: ((height)/2+props.settings.iconSize/2)+"px" }} id="icon-animation">
+      <div className = "icon-container" style={{bottom: ((height)/1.8+props.settings.iconSize/2)+"px" }} id="icon-animation">
         {items}
       </div>
       {curves}

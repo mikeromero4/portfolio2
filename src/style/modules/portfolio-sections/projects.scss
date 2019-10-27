@@ -1,0 +1,20 @@
+#projects-section {
+  background: black;
+  padding: 50px;
+  .note {
+    height: 100vh;
+    border-radius: 10px;
+    margin: 50px;
+    margin-top: 0;
+    background: white;
+    border: 1px solid gray;
+    padding: 10px;
+    box-shadow: 3px 3px 5px #0000003b;
+  }
+  .project {
+    height: 2000px;
+    background: black;
+    padding: 10px;
+    margin: 10px;
+  }
+}

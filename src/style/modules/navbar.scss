@@ -1,0 +1,16 @@
+.nav-item {
+  flex-grow: 1;
+}
+.nav-link {
+    text-decoration: none;
+    transition-duration: 300ms;
+    transition-property: background-color;
+    background: black;
+    color: white;
+    padding: 10px;
+  
+  &:hover {
+      background: blue;
+  }
+}
+
