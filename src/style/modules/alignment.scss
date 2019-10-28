@@ -1,0 +1,13 @@
+.full-screen{
+    height: 100vh;
+}
+.flex{
+    min-height: 400px;
+    display: flex;
+    &--vertical{
+        flex-direction: column;
+    }
+    &--horizontal{
+        flex-direction: row;
+    }
+}

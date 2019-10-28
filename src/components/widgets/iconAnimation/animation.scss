@@ -1,4 +1,5 @@
 @import "../../../style/base/variables.scss";
+
 .animation {
   height: 50%;
   flex-grow: 1;
@@ -12,6 +13,19 @@
     bottom: 0;
     line-height: 0;
     position: absolute;
+    &--layer0{
+      fill:lighten(mix($primary-color2,$primary-color2,80%),7%);
+    }
+    &--layer1{
+      fill:lighten(mix($primary-color2,$primary-color2,60%),15%);
+    }
+    &--layer2{
+      fill:lighten(mix($primary-color2,$primary-color2,40%),25%);
+    }
+
+    &--layer4{
+      fill:black;
+    }
     path {
       stroke: none;
       stroke-width: 2px;
@@ -21,7 +35,10 @@
     }
   }
 }
-
+.icon-container{
+  position: absolute;
+    z-index: 1;
+}
 #icon-animation {
   .animated-icon {
     height: 20px;

@@ -8,16 +8,15 @@
     background-image: repeating-linear-gradient(
       45deg,
       $primary-color1 0px,
-      $primary-color2 3px,
-      $primary-color2 7px,
-      black 3px
+      mix($primary-color2,$primary-color1,70%) 3px,
+      $primary-color1 7px,
     );
   }
   &__layer2 {   //the gradient layer
     background-image: linear-gradient(
-      $primary-color1  10%,
-      rgba($primary-color1, 0.1) 30%,
-      $primary-color2  90%
+      $primary-color1  5%,
+      rgba(black, 0) 50%,
+      $primary-color2  95%
     );
   }
 }
