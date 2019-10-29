@@ -1,7 +1,9 @@
+  //solution 2:
+  html, body,  #___gatsby,#gatsby-focus-wrapper,main,#main-content,#portfolio-page,#section--intro{
+    height:100%;
+  }
+
 #section--intro {
-  min-height: 400px;
-  height: 100vh; // doesnt work on some mobile browsers
-  min-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
     .inner-container {
