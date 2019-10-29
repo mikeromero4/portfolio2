@@ -1,6 +1,7 @@
 #section--intro {
   min-height: 400px;
-  height: 100vh;
+  height: 100vh; // doesnt work on some mobile browsers
+  min-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
     .inner-container {
