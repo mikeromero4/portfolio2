@@ -2,7 +2,6 @@
   background: black;
   padding: 50px;
   .note {
-    height: 100vh;
     border-radius: 10px;
     margin: 50px;
     margin-top: 0;
@@ -11,10 +10,17 @@
     padding: 10px;
     box-shadow: 3px 3px 5px #0000003b;
   }
+}
   .project {
-    height: 2000px;
-    background: black;
+    color:white;
+    background: $primary-color1;
     padding: 10px;
     margin: 10px;
+    &__header {
+
+    }
+    &__info {
+
+    }
   }
-}
+

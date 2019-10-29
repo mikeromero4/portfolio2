@@ -15,10 +15,23 @@ let animationSettings = {
   shrink: false,
 }
 
-export default () => (
-  <section id="section--intro" className="full-screen flex flex--vertical">
-    <Navigation />
-    <div id="intro" style={{ flexGrow: 1, flexBasis: "50%" }}>
+export default () => {
+  let element =  React.useRef()
+  let sectionHeight = element.current ? element.current.offsetHeight : 0
+  return <section ref={element} id="section--intro">
+    <Navigation {...{sectionHeight}}/>
+    <Intro/>
+    <Animation settings={animationSettings} />
+  </section>
+}
+
+let Navigation = (props) => 
+  <Headroom offset={0} tolerance="10" pinStart={props.sectionHeight}>
+    <Header siteTitle={"my portfolio"} />
+  </Headroom>
+
+let Intro=()=>
+  <div id="intro" style={{ flexGrow: 1, flexBasis: "50%" }}>
       <StripedBackground />
       <div className="inner-container">
         <h2>Michael Romero</h2>
@@ -28,18 +41,8 @@ export default () => (
         </h3>
       </div>
     </div>
-    <Animation settings={animationSettings} />
-  </section>
-)
 
-let Navigation = () => (
-  <Headroom offset="400" tolerance="27" pinStart={590}>
-    <Header siteTitle={"my portfolio"} />
-  </Headroom>
-)
-
-let StripedBackground = () => (
+let StripedBackground = () =>
   <div className="striped-bg striped-bg__layer1">
     <div className="striped-bg striped-bg__layer2" />
   </div>
-)

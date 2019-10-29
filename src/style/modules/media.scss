@@ -1,0 +1,23 @@
+.media,
+.media__body {
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+  color:white;
+}
+.media__body :first-child {
+  margin-top: 0;
+}
+.media__image {
+  float:left;
+  margin-right: 10px;
+}
+.media--rev .media__image {
+  float:right;
+  margin-left: 10px;
+  margin-right: 0;
+}
+/*when used inside an anchor*/
+.media__image img {
+  display:block;
+}

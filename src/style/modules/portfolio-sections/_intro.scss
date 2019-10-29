@@ -1,7 +1,9 @@
 #section--intro {
+  min-height: 400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
     .inner-container {
-      padding: 20px;
-      position: absolute;
       min-height: 250px;
     }
     #intro {
@@ -15,13 +17,11 @@
       font-style: italic;
       font-variant: petite-caps;
       min-width: min-content;
-      padding: 20px;
       color:$secondary-color1;
-      font-size: 4em;
+      font-size: 5em;
       text-shadow: 2px 2px 2px black;
     }
     h3 {
-      padding: 20px;
       border-left: 2px solid black;
       text-align: left;
       color: white;
@@ -39,7 +39,6 @@
       h3{
         border-left: none;
         text-align: center;
-        margin-top: 20px;
       }
     }
   }

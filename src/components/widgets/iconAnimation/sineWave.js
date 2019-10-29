@@ -5,21 +5,22 @@ export default ({time,settings})=>{
   let curves = [
     {
       yOffset:0,
-      lineHeight: height-20,
+      lineHeight: height-30,
       flowSpeed: -40,
     },
     {
-      yOffset:height/3.9,
+      yOffset:height*(25/100),
       lineHeight: height/2,
       flowSpeed: -70,
     },
     {
-      yOffset:height/2+settings.iconSize/2-80,
-      lineHeight: centerOffset*2,
+      yOffset:height*(35/100),
+      lineHeight: height/3, 
     },
     {
-      yOffset:height/8+settings.iconSize/2-80,
-      lineHeight: centerOffset*(height/300),
+      half:true,
+      yOffset:0,
+      lineHeight: 0,
     },
   ]
   return curves.map((e,index)=> 
@@ -35,7 +36,7 @@ let Curve = ({data}) => (
       <svg
         width={data.width}
         height={
-          data.amplitude * 2.5 +
+          data.amplitude * 2 +
           data.lineHeight 
         }
       >
@@ -57,7 +58,7 @@ function createPath(data) {
     }
     if (data.half || !data.lineHeight) {
       //draw one curved side and one flat side
-      points = [[0, 0], ...points, [data.width, 0]]
+      points = [[0, data.amplitude*2],[0, 0], ...points, [data.width, 0],[data.width, data.amplitude*2]]
     } 
     else {
       //draw 2 curved sides

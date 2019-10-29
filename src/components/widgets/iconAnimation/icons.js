@@ -25,7 +25,7 @@ export default props => {
 }
 let Item = props => {
   let { height } = props.settings
-  let { x, y, opacity } = calculateIconPosition(props)
+  let { x, y, opacity,display } = calculateIconPosition(props)
   let size = props.settings.shrink ? Math.min(opacity / 2, 0.9) : 1
   return (
     <div
@@ -37,6 +37,7 @@ let Item = props => {
         className="animated-icon"
         style={{
           opacity: opacity,
+          display:(display===true?'unset':'none'),
           transform: `translate(${x}px, ${y}px)
           scale(${size})`,
         }}
@@ -53,17 +54,18 @@ let Item = props => {
 
 
 function calculateIconPosition ({ time, index, settings }){
-    let { speed, amplitude, width, totalLength, spacing, frequency, flowSpeed = 20, fadeCutoff = 4,} = settings
-    let x = ((index * spacing) / speed + time) * speed // x position of icon
+    const { speed, amplitude, width, totalLength, spacing, frequency, flowSpeed = 20, fadeCutoff = 4,} = settings
+    let display=true
+    ,x = ((index * spacing) / speed + time) * speed;    // x position of icon
     x %= totalLength                                   // Loop the movement on X axis
     let waveX = x / frequency + time / flowSpeed       // the x coordinate (phase) of the sine wave
     let y = Math.sin(waveX) * amplitude                // the y coordinate of the sine wave
     let center = (width - settings.iconSize) / 2       // center of the screen (offset by icon size)
     let opacity = fadeCutoff - (Math.abs(x - center) / center) * fadeCutoff // opacity that fades in and out at the edges of the screen
-    if (x % totalLength > width) {
-      opacity = 0
+    if (opacity<=0.01) {
+      display = false
     }
-    return { x: x, y, opacity }
+    return { x: x, y, opacity,display }
   }
 
 
