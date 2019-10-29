@@ -6,8 +6,8 @@
 #section--intro {
   //calc fallback for mobile vh bug (part 1):
   //height:100vh; //fallback for calc (extra fallback for vh shamelessly placed above)
-  height: calc(var(--vh, 1vh) * 100); //fixes vh bug on mobile browsers ('--vh' prop set through js)
-  //min-height: -webkit-fill-available;
+  //height: calc(var(--vh, 1vh) * 100); //fixes vh bug on mobile browsers ('--vh' prop set through js)
+  height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
     .inner-container {
