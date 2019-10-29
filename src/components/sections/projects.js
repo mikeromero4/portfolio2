@@ -17,7 +17,7 @@ let projectData = [
 
 let Project = ({name,description})=>
 <div class="media">
-    <img class="media__image" height = {400} src="//placehold.it/60&text=item" alt="" />
+    <img class="media__image" width = {200} src="//placehold.it/60&text=item" alt="" />
     <div class="media__body">
         <h4>{name}</h4>
         <p>{description}</p>

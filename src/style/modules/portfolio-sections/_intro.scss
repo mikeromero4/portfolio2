@@ -4,6 +4,7 @@
   }
 
 #section--intro {
+  min-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
     .inner-container {
