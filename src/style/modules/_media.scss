@@ -1,0 +1,27 @@
+.media {
+  $this:&;
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1;
+  color: white;
+  :first-child {
+    margin-top: 0;
+  }
+  &__body {
+    @extend #{$this};
+  }
+  &__image {
+    float: left;
+    margin-right: 10px;
+    img {
+      display: block;
+    }
+  }
+  &--rev {
+    #{$this}__image {
+      float: right;
+      margin-left: 10px;
+      margin-right: 0;
+    }
+  }
+}
