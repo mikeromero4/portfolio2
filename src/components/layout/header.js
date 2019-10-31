@@ -9,9 +9,9 @@ let navigationList = [
 ]
 
 const NavigationItem = (props)=>(
-  <div className='nav-item'>
+  <div className='nav__item'>
     <AnchorLink href = {"#"+props.link + "-section"}>
-      <div className='nav-link'>
+      <div className='nav__link'>
         {props.link}
       </div>
     </AnchorLink>
@@ -23,7 +23,7 @@ export default () => {
     <NavigationItem link = {e}/>
   )
   return(
-    <header>
+    <header className='nav'>
         {navLinks}
     </header>
   )

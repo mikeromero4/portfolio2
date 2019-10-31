@@ -1,0 +1,32 @@
+.l-content{
+    display:flex;
+    flex-direction:column;
+    border-top:1px solid gray;
+    &:first-child{
+        border-top:none;
+    }
+    &__title{
+        padding:10px;
+        background:white;
+        color:black;
+        font-size:20px;
+        &--sm{
+            font-size:1em;
+        }
+        &--md{
+            font-size:2em;
+        }
+        &--lg{
+            font-size:3em;
+        }
+    }
+    &__body{
+        padding:10px;
+        color:white;
+        background:whiteSet;
+    }
+    &__footer{
+        color:green;
+        
+    }
+}

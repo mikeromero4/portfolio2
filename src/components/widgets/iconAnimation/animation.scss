@@ -14,16 +14,16 @@
     line-height: 0;
     position: absolute;
     &--layer0{
-      fill:lighten(mix($primary-color2,$primary-color2,80%),7%);
+      fill:lighten(mix($primary-color2,$primary-color2,80%),10%);
     }
     &--layer1{
-      fill:lighten(mix($primary-color2,$primary-color2,60%),15%);
+      fill:lighten(mix($primary-color2,$primary-color2,60%),20%);
     }
     &--layer2{
-      fill:lighten(mix($primary-color2,$primary-color2,40%),25%);
+      fill:lighten(mix($primary-color2,$primary-color2,40%),35%);
     }
 
-    &--layer4{
+    &--layer3{
       fill:black;
     }
     path {

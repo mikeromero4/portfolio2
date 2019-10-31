@@ -3,19 +3,18 @@
   padding: 50px;
   .note {
     border-radius: 10px;
-    margin: 50px;
+    margin: 20px;
     margin-top: 0;
-    background: white;
+    color:white;
+    background: black;
     border: 1px solid gray;
-    padding: 10px;
+    padding: 20px;
     box-shadow: 3px 3px 5px #0000003b;
   }
 }
   .project {
     color:white;
-    background: $primary-color1;
-    padding: 10px;
-    margin: 10px;
+    margin: 30px 0;
     &__header {
 
     }

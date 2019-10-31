@@ -1,14 +1,12 @@
-.media {
-  $this:&;
-  overflow: hidden;
-  _overflow: visible;
+.o-media {
+  $this: &;
+  &__body {
+    @extend #{$this}; //
+  }
+  //overflow: hidden;
   zoom: 1;
-  color: white;
   :first-child {
     margin-top: 0;
-  }
-  &__body {
-    @extend #{$this};
   }
   &__image {
     float: left;

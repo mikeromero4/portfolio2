@@ -1,0 +1,17 @@
+.c-list{
+    &__item{
+        border-radius: 5px;
+    border: 1px solid grey;
+        background:white;
+        color:black;
+        padding:10px;
+        display:inline-block;
+        margin:10px;
+        &--container{
+            border: 1px solid grey;
+        }
+    }
+    &--nested{
+
+    }
+}
