@@ -1,5 +1,9 @@
 import React from "react"
-import img1 from "../../images/2.png"
+import img1 from "../../../images/2.png"
+import Content from "../../UI/content"
+import Media from "../../UI/media"
+import List from "../../UI/list"
+import "./style.scss"
 
 export default () => (
   <div>
@@ -32,10 +36,7 @@ let projectData = [
         "Gatsby",
         "Netlify",
         "SASS",
-        {
-          name: "AWS",
-          items: ["cognito", "Api Gateway", "Lambda", "DynamoDB"],
-        },
+        "cognito", "Api Gateway", "Lambda", "DynamoDB"
       ],
     },
     features: {
@@ -71,7 +72,7 @@ let Project = ({ name, description, url, technologies,purpose }) => (
   <Content titleSize = "md" title = {name} footer = {<div>view github repo</div>}>
       <Media image = {{
         link:url,
-        width:200,
+        width:300,
         source:img1,
         description:""
       }}>
@@ -81,49 +82,12 @@ let Project = ({ name, description, url, technologies,purpose }) => (
        <Content title = "title">
          <p>{purpose}</p>
         </Content>
-       <Content title = "technologies">
-         <List list={technologies} />
-        </Content>
+       
+         
+        
       </Media>
+      asdf
+      <List list={technologies} />
   </Content>
   </div>
-)
-
-let Media = ({image,children})=><div className="o-media">
-<a target="_blank" href={image.link}>
-  <img
-    class="o-media__image"
-    width={image.width}
-    src={image.source}
-    alt={image.description}
-  />
-</a>
-<div class="o-media__body">
-  {children}
-</div>
-</div>
-
-
-let Content = ({title,children,titleSize = "sm",footer})=>
-  <div className = "l-content">
-  <h4  className = {`l-content__title--${titleSize}`}>{title}</h4>
-  <div className = "l-content__body">
-    {children}
-    </div>
-    <div className = "l-content__footer">
-      {footer || ""}
-    </div>
-    </div>
-
-let List = ({ list,nested }) => (
-  <ul className={'c-list'+(nested?'--nested':'')}> 
-    {list.items.map(item =>                               // map the given list
-        typeof item === "string" ? (
-          <li className = "c-list__item">{item}</li>      // if an item is a string, map it to a list item
-        ) : (
-          <li className = "c-list__item--container">{item.name || ""}      
-          <List list={item} nested = {true}/></li>         // or else map it to a list created from the item (recursively)
-        ) 
-    )}
-  </ul>
 )

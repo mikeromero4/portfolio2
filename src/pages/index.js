@@ -1,8 +1,8 @@
 import React from "react"
-import Intro from "../components/sections/intro"
-import About from "../components/sections/about"
-import Projects from "../components/sections/projects"
-import Contact from "../components/sections/contact"
+import Intro from "../components/sections/intro/index"
+import About from "../components/sections/about/index"
+import Projects from "../components/sections/projects/index"
+import Contact from "../components/sections/contact/index"
 import Layout from "../components/layout/index"
 import SEO from "../components/utilities/seo"
 import "../style/main.scss" // Global styles could be included in gatsby-browser.js instead of here if there were multiple pages

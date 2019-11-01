@@ -1,7 +1,8 @@
 import React from "react"
-import Animation from "../widgets/iconAnimation/animation"
+import Animation from "../../widgets/iconAnimation/animation"
 import Headroom from "react-headroom"
-import Header from "../layout/header"
+import Header from "../../layout/header"
+import "./style.scss"
 
 let animationSettings = {
   speed: 0.4,
@@ -42,7 +43,3 @@ let Intro=()=>
       </div>
     </div>
 
-let StripedBackground = () =>
-  <div className="striped-bg striped-bg__layer1">
-    <div className="striped-bg striped-bg__layer2" />
-  </div>
