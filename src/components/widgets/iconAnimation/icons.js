@@ -30,7 +30,6 @@ let Item = props => {
   return (
     <div
       className="icon-container"
-      style={{ bottom: height / 1.8 + props.settings.iconSize / 2 + "px" }}
       id="icon-animation"
     >
       <div

@@ -1,6 +1,5 @@
-//normalize and reset
-@import "./base/normalize.scss";
-@import "./base/reset.scss";
-
-//variables and mixins
-@import "./base/variables.scss";
+//index:
+@import "./normalize.scss";
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./mixins.scss";

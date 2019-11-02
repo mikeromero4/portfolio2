@@ -8,14 +8,13 @@ import SEO from "../components/utilities/seo"
 import "../style/main.scss" // Global styles could be included in gatsby-browser.js instead of here if there were multiple pages
 
  
-export default () => (
-  <Layout>
-    <SEO title="Portfolio" />
+export default () => <>
+  <SEO title="Portfolio" />
+  <Layout Intro={Intro}>
     <article id = "portfolio-page">
-      <Intro/>
       <section id = "about-section"><About/> </section>
       <section id = "projects-section"> <Projects/></section>
       <section id = "contact-section"><Contact/></section>
     </article>
   </Layout>
-)
+</>

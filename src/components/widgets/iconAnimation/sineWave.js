@@ -1,7 +1,7 @@
 import React from "react" //shame
 export default ({time,settings})=>{
   let {height,width}=settings
-  let centerOffset=50
+  let centerHeight= Math.max(height/4,60)
   let curves = [
     {
       yOffset:0,
@@ -15,12 +15,12 @@ export default ({time,settings})=>{
     },
     {
       yOffset:height*(35/100),
-      lineHeight: height/3, 
+      lineHeight:centerHeight, 
     },
     {
       half:true,
       yOffset:0,
-      lineHeight: 0,
+      lineHeight: height/10,
     },
   ]
   return curves.map((e,index)=> 
@@ -58,7 +58,7 @@ function createPath(data) {
     }
     if (data.half || !data.lineHeight) {
       //draw one curved side and one flat side
-      points = [[0, data.amplitude*2],[0, 0], ...points, [data.width, 0],[data.width, data.amplitude*2]]
+      points = [[0, data.amplitude*2+data.lineHeight],[0, 0], ...points, [data.width, 0],[data.width, data.amplitude*2+data.lineHeight]]
     } 
     else {
       //draw 2 curved sides

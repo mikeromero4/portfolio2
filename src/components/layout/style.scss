@@ -1,13 +1,12 @@
-@import "../../style/base/variables.scss";
-
+@import "../../style/variables";
+header{
+  position: sticky;
+    top: 0;
+    z-index: 1;
+}
 .headroom-wrapper {
     z-index: 400;
-  }
-  .headroom--top {
-    position: relative;
-  }
-  
-  
+  }  
   #main-content {
     padding: 0 9%;
     background: linear-gradient(

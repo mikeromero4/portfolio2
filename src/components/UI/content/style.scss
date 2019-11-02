@@ -1,15 +1,26 @@
+@import "../../../style/variables.scss";
+
+
 .l-content{
-    
+    border-radius:10px;
     display:flex;
     flex-direction:column;
     border-top:1px solid gray;
     &:first-child{
         border-top:none;
     }
+    &--dark{
+        background: $primary-color2;
+border:2px solid grey;
+    }
+    &--light{
+        background:white;
+
+    }
     &__title{
         padding:10px;
-        background:white;
-        color:black;
+        //background:white;
+        color:white;
         font-size:20px;
         &--sm{
             font-size:1em;

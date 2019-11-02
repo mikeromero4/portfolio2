@@ -1,14 +1,16 @@
 import React from "react"
-import img1 from "../../../images/2.png"
 import Content from "../../UI/content"
-import Media from "../../UI/media"
-import List from "../../UI/list"
+import Project from "./project"
 import "./style.scss"
+import Bg from "../../UI/background/striped"
+import Layer from "../../UI/layers/index"
 
 export default () => (
   <div>
-
-    <div className="note">
+    <Layer layers = {[
+      <Bg variation='black-white'/>,
+      <div className="note">
+      <div className='note__content'>
       <h4>A Note to potential employers:</h4>
       <p>
         The projects displayed here are personal projects that I built for my
@@ -17,9 +19,17 @@ export default () => (
         I am unable to display. (Can give more info upon request)
       </p>
     </div>
-    <Content titleSize = "lg" title = "projects" footer = {<div>test</div>}>
+    </div>
+    ]}/>
+          
+
+
+    <div className='projects-list'>
+      Projectss
+    <Content modifier='light' titleSize = "lg" title = "" footer = {<div>test</div>}>
     {projectData.map(e => (<Project {...e} />))}
     </Content>
+    </div>
   </div>
 )
 
@@ -67,27 +77,4 @@ let projectData = [
   },
 ]
 
-let Project = ({ name, description, url, technologies,purpose }) => (
-  <div className = "project">
-  <Content titleSize = "md" title = {name} footer = {<div>view github repo</div>}>
-      <Media image = {{
-        link:url,
-        width:300,
-        source:img1,
-        description:""
-      }}>
-       <Content title = "description">
-         <p>{description}</p>
-        </Content>
-       <Content title = "title">
-         <p>{purpose}</p>
-        </Content>
-       
-         
-        
-      </Media>
-      asdf
-      <List list={technologies} />
-  </Content>
-  </div>
-)
+

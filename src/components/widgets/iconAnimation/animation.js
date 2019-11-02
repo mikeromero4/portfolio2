@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import "./animation.scss"
 import Waves from "./sineWave"
 import Icons from "./icons"
+import { relative } from "path"
 
 //this should probably(?) be a class component due to increased use of hooks
 export default props => {
@@ -33,8 +34,10 @@ export default props => {
   }
   return (
     <div className="animation">
-      <div style={{ height: "100%" }} ref={el}>
+          <div ref={el} style={{position:'relative', height: "100%" }}>
+      <div style={{position:'absolute',bottom: (height*(35/100) + settings.iconSize/2 + 50 +"px") }} >
         <Icons  settings={settings} time={time} />
+      </div>
       </div>
       <Waves settings={settings} time={time} />
     </div>

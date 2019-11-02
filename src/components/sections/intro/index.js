@@ -1,7 +1,6 @@
 import React from "react"
 import Animation from "../../widgets/iconAnimation/animation"
-import Headroom from "react-headroom"
-import Header from "../../layout/header"
+import StripedBackground from "../../UI/background/striped/index"
 import "./style.scss"
 
 let animationSettings = {
@@ -17,19 +16,12 @@ let animationSettings = {
 }
 
 export default () => {
-  let element =  React.useRef()
-  let sectionHeight = element.current ? element.current.offsetHeight : 0
-  return <section ref={element} id="section--intro">
-    <Navigation {...{sectionHeight}}/>
+  return <section  id="section--intro">
     <Intro/>
     <Animation settings={animationSettings} />
   </section>
 }
 
-let Navigation = (props) => 
-  <Headroom offset={0} tolerance="10" pinStart={props.sectionHeight}>
-    <Header siteTitle={"my portfolio"} />
-  </Headroom>
 
 let Intro=()=>
   <div id="intro" style={{ flexGrow: 1, flexBasis: "50%" }}>
