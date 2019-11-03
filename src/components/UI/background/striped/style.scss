@@ -1,0 +1,54 @@
+@import "../../../../style/variables.scss";
+//striped-bg--black-white__layer__1
+.striped-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  &__layer {
+    background-size: auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    //z-index: -100;
+    &__1 {
+      //the stripe layer
+      background-image: repeating-linear-gradient(
+        45deg,
+        $primary-color1 0px,
+        mix($primary-color2, $primary-color1, 70%) 3px,
+        $primary-color1 7px
+      );
+    }
+    &__2 {
+      //the gradient layer
+      background-image: linear-gradient(
+        $primary-color1 5%,
+        rgba(black, 0) 50%,
+        $primary-color2 95%
+      );
+    }
+  }
+  &--black-white {
+    &__layer {
+      &__1 {
+        //the stripe layer
+        background-image: repeating-linear-gradient(
+          45deg,
+          black 0px,
+          mix($primary-color2, black, 70%) 3px,
+          black 7px
+        );
+      }
+      &__2 {
+        //the gradient layer
+        background-image: linear-gradient(
+          black 5%,
+          rgba(black, 0) 50%,
+          $primary-color2 95%
+        );
+      }
+    }
+  }
+}

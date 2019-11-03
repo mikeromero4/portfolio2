@@ -1,0 +1,62 @@
+
+@import "../../../style/variables.scss";
+.full-screen{
+  height:600px; //fallback for vh
+  height:100vh; //fallback for calc
+  //height: calc(var(--vh, 1vh) * 100); //fixes vh bug on mobile browsers ('--vh' prop set through js to exclude browser navigation height)
+  display: flex;
+  flex-direction: column;
+}
+//calc fallback for mobile vh bug (part 2)(should probably be in a shame file):
+   html, body,  #___gatsby,#gatsby-focus-wrapper,main,#main-content,#portfolio-page,#section--intro{
+    // height:100%;
+  }
+
+#section--intro {
+  //calc fallback for mobile vh bug (part 1):
+  height: 100%;
+  flex-grow:1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+    z-index: 0;
+    .inner-container {
+      min-height: 250px;
+    }
+    #intro {
+      position: relative;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+    }
+    h2 {
+      text-align: center;
+      font-style: italic;
+      font-variant: petite-caps;
+      min-width: min-content;
+      color:$secondary-color1;
+      font-size: 5em;
+      text-shadow: 2px 2px 2px black;
+    }
+    h3 {
+      border-left: 2px solid black;
+      text-align: left;
+      color: white;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    #section--intro #intro {
+      margin: 0;
+      display: inline-block;
+      h2,h3 {
+        margin: 0;
+        padding: 0;
+      }
+      h3{
+        border-left: none;
+        text-align: center;
+      }
+    }
+  }
+  
