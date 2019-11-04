@@ -1,0 +1,79 @@
+@import "../../../style/variables.scss";
+
+.animation {
+  height: 50%;
+  flex-grow: 1;
+  flex-basis: 50%;
+  background: $primary-color2;
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  z-index: 200;
+  .curve {
+    bottom: 0;
+    line-height: 0;
+    position: absolute;
+    &--layer0{
+      fill:lighten(mix($primary-color2,$primary-color2,80%),10%);
+    }
+    &--layer1{
+      fill:lighten(mix($primary-color2,$primary-color2,60%),20%);
+    }
+    &--layer2{
+      fill:lighten(mix($primary-color2,$primary-color2,40%),35%);
+    }
+
+    &--layer3{
+      fill:black;
+    }
+    path {
+      stroke: none;
+      stroke-width: 2px;
+    }
+    svg {
+      background: none;
+    }
+  }
+}
+.icon-container{
+  position: absolute;
+    z-index: 1;
+}
+#icon-animation {
+  .animated-icon {
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    svg {
+      transform: rotate(250deg);
+      box-sizing: border-box;
+      transition-duration: 300ms;
+      transition-property: all;
+      padding: -5px;
+      overflow: visible;
+      cursor: pointer;
+
+      //background:white;
+      path {
+        transform: scale(1);
+        transform-origin: center;
+        transition-duration: 300ms;
+        transition-property: all;
+
+        //fill:unset;
+      }
+    }
+    &:hover {
+      border-radius: 5px;
+      svg {
+        path {
+          transform: scale(1.3);
+        }
+        opacity: 1;
+      }
+    }
+  }
+}

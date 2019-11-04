@@ -1,0 +1,25 @@
+@import "../../style/variables";
+header{
+  position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.headroom-wrapper {
+    z-index: 400;
+  }  
+  #main-content {
+    padding: 0 9%;
+    background: linear-gradient(
+      $primary-color1,
+      mix($primary-color2,$primary-color1,50%) 30%,
+      $primary-color2 90%
+    );
+  }
+  @media only screen and (max-width: 800px) {
+    #main-content {
+      padding: 0;
+      background: none;
+      margin: 0;
+    }
+  }
+  

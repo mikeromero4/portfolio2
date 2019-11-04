@@ -5,6 +5,10 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+<<<<<<< HEAD
+=======
+    `gatsby-plugin-sass`,
+>>>>>>> origin/animated-header
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

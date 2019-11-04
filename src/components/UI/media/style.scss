@@ -1,0 +1,24 @@
+.o-media {
+    $this: &;
+    &__body {
+      @extend #{$this}; //
+    }
+    overflow: hidden;
+    :first-child {
+      margin-top: 0;
+    }
+    &__image {
+      float: left;
+      margin-right: 10px;
+      img {
+        display: block;
+      }
+    }
+    &--rev {
+      #{$this}__image {
+        float: right;
+        margin-left: 10px;
+        margin-right: 0;
+      }
+    }
+  }

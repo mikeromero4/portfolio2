@@ -1,0 +1,31 @@
+@import "../../../style/variables.scss";
+#projects-section {
+  background: black;
+  padding: 20px;
+  .note {
+    position: relative;
+    margin:auto;
+    margin-top: 0;
+    color:white;
+    box-shadow: 3px 3px 5px #0000003b;
+    &__content{
+      width: 100%;
+
+      height: 100%;
+    }
+  }
+}
+.projects-list {
+margin:100px 0;
+}
+  .project {
+    color:white;
+    margin: 30px 0;
+    &__header {
+
+    }
+    &__info {
+
+    }
+  }
+

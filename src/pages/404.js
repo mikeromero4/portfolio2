@@ -1,7 +1,12 @@
 import React from "react"
 
+<<<<<<< HEAD
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+=======
+import Layout from "../components/layout/index"
+import SEO from "../components/utilities/seo"
+>>>>>>> origin/animated-header
 
 const NotFoundPage = () => (
   <Layout>
